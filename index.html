@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minicabs London | Professional Taxi Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#3b82f6',
+                        accent: '#ef4444',
+                        light: '#f9fafb'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .airport-card {
+            border-left: 4px solid #3b82f6;
+        }
+        .booking-form input:focus,
+        .booking-form select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-taxi text-xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-primary">Minicabs<span class="text-accent">London</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
+                <a href="#airports" class="text-gray-700 hover:text-primary font-medium">Airports</a>
+                <a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+            </nav>
+            <button class="bg-primary hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-medium transition duration-300">
+                Book Now
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Reliable Taxi Services in London</h1>
+                <p class="text-xl mb-6">Professional, affordable, and punctual minicab services across Greater London</p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition duration-300">
+                        <i class="fas fa-phone mr-2"></i> Call Now: 020 1234 5678
+                    </button>
+                    <button class="bg-transparent border-2 border-white hover:bg-white hover:text-primary px-6 py-3 rounded-lg font-semibold transition duration-300">
+                        Book Online
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6">
+                    <h2 class="text-2xl font-bold mb-4">Quick Booking</h2>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block mb-1">Pickup Location</label>
+                            <input type="text" placeholder="Enter pickup address" class="w-full px-4 py-2 rounded-lg">
+                        </div>
+                        <div>
+                            <label class="block mb-1">Destination</label>
+                            <input type="text" placeholder="Enter destination" class="w-full px-4 py-2 rounded-lg">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block mb-1">Date</label>
+                                <input type="date" class="w-full px-4 py-2 rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block mb-1">Time</label>
+                                <input type="time" class="w-full px-4 py-2 rounded-lg">
+                            </div>
+                        </div>
+                        <button class="w-full bg-accent hover:bg-red-600 text-white py-3 rounded-lg font-bold text-lg transition duration-300">
+                            Get Quote
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We provide a wide range of professional taxi services tailored to your needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Taxi Services -->
+                <div class="service-card bg-light p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-car text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Taxi Services</h3>
+                    <p class="text-gray-600">Reliable point-to-point transfers across London with fixed pricing and no hidden fees.</p>
+                </div>
+                
+                <!-- Airport Transfers -->
+                <div class="service-card bg-light p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-plane-departure text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Airport Transfers</h3>
+                    <p class="text-gray-600">Stress-free airport transfers to all London airports with flight tracking and meet & greet service.</p>
+                </div>
+                
+                <!-- Wheelchair Accessible -->
+                <div class="service-card bg-light p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-wheelchair text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Wheelchair Accessible</h3>
+                    <p class="text-gray-600">Specially equipped vehicles with trained drivers for passengers with mobility requirements.</p>
+                </div>
+                
+                <!-- School Taxi -->
+                <div class="service-card bg-light p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-school text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">School Taxi</h3>
+                    <p class="text-gray-600">Safe and reliable school transportation with DBS-checked drivers and child safety seats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Airport Information Section -->
+    <section id="airports" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Airport Drop-off Charges</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Important information about drop-off charges at London airports</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="airport-card bg-white p-6 rounded-xl shadow-md mb-6">
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-plane text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Heathrow Airport (LHR)</h3>
+                            <p class="text-gray-600 mb-3">Heathrow Airport has implemented a £5.00 drop-off charge for vehicles using the terminal forecourts. This charge applies to all private vehicles including taxis and minicabs.</p>
+                            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+                                <p class="text-yellow-700"><i class="fas fa-exclamation-triangle mr-2"></i><strong>Important:</strong> To avoid this charge, we recommend using the free drop-off points located in the Long Stay car parks. We can arrange pick-up/drop-off at these locations at no extra cost to you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="airport-card bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-plane text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Stansted Airport (STN)</h3>
+                            <p class="text-gray-600 mb-3">Stansted Airport has implemented a £5.00 drop-off charge for vehicles using the terminal forecourt. This charge applies to all private vehicles including taxis and minicabs.</p>
+                            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+                                <p class="text-yellow-700"><i class="fas fa-exclamation-triangle mr-2"></i><strong>Important:</strong> To avoid this charge, we recommend using the free drop-off points located in the Mid Stay car park. We can arrange pick-up/drop-off at these locations at no extra cost to you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Other London Airports</h3>
+                <p class="text-gray-600 mb-6">Gatwick, Luton, and London City airports currently do not have drop-off charges for private vehicles.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h4 class="font-bold text-gray-800">Gatwick (LGW)</h4>
+                        <p class="text-gray-600">No drop-off charge</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h4 class="font-bold text-gray-800">Luton (LTN)</h4>
+                        <p class="text-gray-600">No drop-off charge</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h4 class="font-bold text-gray-800">London City (LCY)</h4>
+                        <p class="text-gray-600">No drop-off charge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="London Taxi" class="rounded-xl shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Choose Minicabs London?</h2>
+                    <p class="text-gray-600 mb-6">With over 15 years of experience serving London, we pride ourselves on providing reliable, safe, and comfortable transportation for all our customers.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 text-green-800 w-8 h-8 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Fully licensed and insured vehicles</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 text-green-800 w-8 h-8 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Professional, DBS-checked drivers</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 text-green-800 w-8 h-8 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">24/7 availability across London</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 text-green-800 w-8 h-8 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Competitive fixed pricing with no surge</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions or ready to book? Get in touch with us today!</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 bg-primary text-white">
+                        <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                                <p>123 Transport Street, London, SW1A 1AA</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone mr-3"></i>
+                                <p>020 1234 5678</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope mr-3"></i>
+                                <p>info@minicabslondon.co.uk</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock mr-3"></i>
+                                <p>24/7 Service</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-3">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Send us a message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded-lg">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded-lg">
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="Your Phone" class="w-full px-4 py-2 border rounded-lg">
+                            </div>
+                            <div>
+                                <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-2 border rounded-lg"></textarea>
+                            </div>
+                            <button class="w-full bg-primary hover:bg-blue-800 text-white py-3 rounded-lg font-bold transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Minicabs<span class="text-accent">London</span></h3>
+                    <p class="text-gray-400">Professional, reliable, and affordable taxi services across London since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Taxi Services</a></li>
+                        <li><a href="#" class="hover:text-white">Airport Transfers</a></li>
+                        <li><a href="#" class="hover:text-white">Wheelchair Accessible</a></li>
+                        <li><a href="#" class="hover:text-white">School Taxi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Airports</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Heathrow (LHR)</a></li>
+                        <li><a href="#" class="hover:text-white">Gatwick (LGW)</a></li>
+                        <li><a href="#" class="hover:text-white">Stansted (STN)</a></li>
+                        <li><a href="#" class="hover:text-white">Luton (LTN)</a></li>
+                        <li><a href="#" class="hover:text-white">London City (LCY)</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>020 1234 5678</li>
+                        <li>info@minicabslondon.co.uk</li>
+                        <li>123 Transport Street, London</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Minicabs London. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
